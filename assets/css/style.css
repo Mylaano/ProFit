@@ -34,7 +34,8 @@
 
 body {
     background-color: var(--color-background);
-    margin: auto 112px;
+    margin: auto;
+    max-width: 1440px;
     font-family: 'Urbanist', sans-serif;
 }
 
