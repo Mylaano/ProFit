@@ -98,7 +98,7 @@ header nav ul li button:hover::after {
 
 /* Introduction */
 
-.introduction {
+.section-1 {
     height: 790px;
     position: relative;
     margin-bottom: 128px;
@@ -142,7 +142,7 @@ header nav ul li button:hover::after {
     border-radius: 64px;
 }
 
-.introduction article {
+.section-1 article {
     position: absolute;
     top: 70px;
     left: 104px;
@@ -151,7 +151,7 @@ header nav ul li button:hover::after {
     gap: 62px;
 }
 
-.introduction article h1 {
+.section-1 article h1 {
     font-size: 96px;
     font-weight: 700;
     color: var(--color-white);
@@ -207,25 +207,26 @@ header nav ul li button:hover::after {
 
 /* How to works */
 
-.how-it-works {
+.section-2 {
     display: flex;
     flex-direction: column;
     gap: 48px;
+    margin-bottom: 128px;
 }
 
-.how-it-works h2 {
+.section-2 h2 {
     font-size: 64px;
     font-weight: 700;
     color: #303437;
     text-align: center;
 }
 
-.how-it-works ul {
+.section-2 ul {
     display: flex;
     gap: 32px;
 }
 
-.how-it-works ul li {
+.section-2 ul li {
     background-color: var(--color-white);
     border: 1px solid #E3E5E6;
     border-radius: 24px;
@@ -238,11 +239,11 @@ header nav ul li button:hover::after {
     gap: 16px;
 }
 
-.how-it-works ul li:nth-child(1) {
+.section-2 ul li:nth-child(1) {
     background: var(--btn-linear-gradient);
 }
 
-.how-it-works ul li img {
+.section-2 ul li img {
     width: 24px;
     height: 24px;
     background-color: #303437;
@@ -250,17 +251,227 @@ header nav ul li button:hover::after {
     padding: 16px;
 }
 
-.how-it-works ul li:nth-child(1) img {
+.section-2 ul li:nth-child(1) img {
     background-color: var(--color-white);
 }
 
-.how-it-works ul li p {
+.section-2 ul li p {
     font-size: 24px;
     font-weight: 700;
     color: #303437;
     text-align: center;
 }
 
-.how-it-works ul li:nth-child(1) p {
+.section-2 ul li:nth-child(1) p {
     color: var(--color-white);
+}
+
+/* Get Profit. Get results */
+
+.section-3 {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    margin-bottom: 128px;
+}
+
+.section-3 h2 {
+    font-size: 64px;
+    font-weight: 700;
+    color: #303437;
+    text-align: center;
+}
+
+.section-3 article {
+    display: flex;
+    gap: 32px;
+}
+
+.section-3 article figure {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.section-3 article figure img {
+    width: 100%;
+}
+
+.section-3 article figure figcaption {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.section-3 article figure figcaption h3 {
+    font-size: 24px;
+}
+
+/* Section 4 */
+
+.section-4 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 177px;
+}
+
+.section-4 article {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    gap: 56px;
+    margin-top: 70px;
+}
+
+.section-4 article span {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.section-4 article span h3 {
+    font-size: 48px;
+    color: #303437;
+}
+
+.section-4 article span p {
+    width: 56%;
+    text-align: justify;
+}
+
+.section-4 button {
+    font-family: 'Urbanist', sans-serif;
+    background: var(--btn-linear-gradient);
+    color: var(--color-white);
+    border-radius: 24px;
+    font-weight: 700;
+    width: 176px;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    transition: padding 400ms;
+}
+
+.section-4 button:hover {
+    padding-right: 2em;
+}
+
+.section-4 button::after {
+    content: "";
+    display: block;
+    background: url("../images/icons/arrow-right-icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 18px;
+    height: 18px;
+    opacity: 0;
+    position: absolute;
+    transform: translateX(26px);
+    transition: all 400ms;
+}
+
+.section-4 button:hover::after {
+    opacity: 1;
+    transform: translateX(55px);
+}
+
+.section-4 aside img {
+    height: 778px;
+}
+
+/* Section 5 */
+
+.section-5 {
+    background-color: var(--color-white);
+    border-radius: 64px;
+    padding: 56px 156px;
+}
+
+.section-5 h2 {
+    font-size: 64px;
+    font-weight: 700;
+    color: #303437;
+    text-align: center;
+    margin-bottom: 6px;
+}
+
+.section-5 p {
+    font-size: 20px;
+    font-weight: 600;
+    color: #303437;
+    text-align: center;
+    margin-bottom: 56px;
+}
+
+.section-5 article {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    gap: 32px;
+    margin-bottom: 46px;
+}
+
+.section-5 article figure {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-5 article figure img {
+    width: 100%;
+    height: 185px;
+    object-fit: cover;
+    border-radius: 24px;
+}
+
+.section-5 article figure figcaption {
+    position: absolute;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--color-white);
+}
+
+.section-5 button {
+    font-family: 'Urbanist', sans-serif;
+    background: var(--btn-linear-gradient);
+    color: var(--color-white);
+    border-radius: 24px;
+    font-weight: 700;
+    width: 281px;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    transition: padding 400ms;
+    margin: auto;
+}
+
+.section-5 button:hover {
+    padding-right: 2.5em;
+}
+
+.section-5 button::after {
+    content: "";
+    display: block;
+    background: url("../images/icons/arrow-right-icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 18px;
+    height: 18px;
+    opacity: 0;
+    position: absolute;
+    transform: translateX(46px);
+    transition: all 400ms;
+}
+
+.section-5 button:hover::after {
+    opacity: 1;
+    transform: translateX(75px);
 }
