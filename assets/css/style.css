@@ -79,7 +79,7 @@ header nav ul li button:hover {
 header nav ul li button::after {
     content: "";
     display: block;
-    background: url("/assets/images/icons/arrow-right-icon.svg");
+    background: url("../images/icons/arrow-right-icon.svg");
     background-repeat: no-repeat;
     background-position: center;
     width: 18px;
