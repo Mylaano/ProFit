@@ -99,59 +99,16 @@ header nav ul li button:hover::after {
 /* Introduction */
 
 .section-1 {
-    height: 790px;
-    position: relative;
-    margin: 0 112px 128px;
-}
-
-.bg-linear-gradient {
-    position: relative;
-    height: 100%;
-}
-
-.bg-linear-gradient::before {
-    content: "";
-    display: block;
-    background: rgb(0 0 0 / 20%);
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    border-radius: 64px;
-}
-
-.bg-linear-gradient img {
-    width: 100%;
-    height: 100%;
-    border-radius: 64px;
-    object-fit: cover;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
-}
-
-.bg-linear-gradient::after {
-    content: "";
-    display: block;
-    background: linear-gradient(165.18deg, rgba(22, 191, 253, 0.25) 6.08%, rgba(203, 48, 102, 0.25) 94.78%);
-    opacity: 0.5;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    border-radius: 64px;
-}
-
-.section-1 article {
-    position: absolute;
-    top: 70px;
-    left: 104px;
+    height: calc(792px - 70px);
     display: flex;
     flex-direction: column;
     gap: 62px;
+    position: relative;
+    margin: 0 112px 128px;
+    padding: 70px 0 0 104px;
 }
 
-.section-1 article h1 {
+.section-1 h1 {
     font-size: 96px;
     font-weight: 700;
     color: var(--color-white);
@@ -192,6 +149,9 @@ header nav ul li button:hover::after {
     display: flex;
     gap: 8px;
     color: var(--color-white);
+    font-weight: 300;
+    width: 35%;
+    text-align: center;
 }
 
 .stats-users span strong {
@@ -199,10 +159,46 @@ header nav ul li button:hover::after {
     font-weight: 800;
 }
 
-.stats-users span p {
-    font-weight: 300;
-    width: 38%;
-    text-align: center;
+.bg-linear-gradient {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.bg-linear-gradient::before {
+    content: "";
+    display: block;
+    background: rgb(0 0 0 / 20%);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 64px;
+}
+
+.bg-linear-gradient img {
+    width: 100%;
+    height: 100%;
+    border-radius: 64px;
+    object-fit: cover;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+}
+
+.bg-linear-gradient::after {
+    content: "";
+    display: block;
+    background: linear-gradient(165.18deg, rgba(22, 191, 253, 0.25) 6.08%, rgba(203, 48, 102, 0.25) 94.78%);
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 64px;
 }
 
 /* How to works */
@@ -308,36 +304,46 @@ header nav ul li button:hover::after {
     font-size: 24px;
 }
 
+.section-3 article figure figcaption p {
+    font-family: 'Raleway', sans-serif;
+}
+
 /* Section 4 */
 
 .section-4 {
-    display: flex;
-    justify-content: space-between;
+    height: 778px;
     margin: 0 167px 177px 102px;
-}
-
-.section-4 article {
+    position: relative;
     display: flex;
     flex-direction: column;
-    align-items: baseline;
-    gap: 56px;
-    margin-top: 70px;
+    justify-content: center;
 }
 
-.section-4 article span {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
+.section-4::after {
+    content: '';
+    display: block;
+    width: 449px;
+    height: 778px;
+    background: url('../images/phones/iphone-13.png');
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
 }
 
-.section-4 article span h3 {
+.section-4 h2 {
+    width: 591px;
     font-size: 48px;
     color: #303437;
+    margin-bottom: 24px;
 }
 
-.section-4 article span p {
-    width: 56%;
-    text-align: justify;
+.section-4 p {
+    width: 591px;
+    font-family: 'Raleway', sans-serif;
+    color: #303437;
+    font-size: 20px;
+    margin-bottom: 56px;
 }
 
 .section-4 button {
@@ -379,10 +385,6 @@ header nav ul li button:hover::after {
     transform: translateX(55px);
 }
 
-.section-4 aside img {
-    height: 778px;
-}
-
 /* Section 5 */
 
 .section-5 {
@@ -401,6 +403,7 @@ header nav ul li button:hover::after {
 }
 
 .section-5 p {
+    font-family: 'Raleway', sans-serif;
     font-size: 20px;
     font-weight: 600;
     color: #303437;
@@ -408,7 +411,7 @@ header nav ul li button:hover::after {
     margin-bottom: 56px;
 }
 
-.section-5 article {
+.section-5 div {
     display: grid;
     grid-template-columns: auto auto auto;
     grid-template-rows: auto auto;
@@ -416,21 +419,21 @@ header nav ul li button:hover::after {
     margin-bottom: 46px;
 }
 
-.section-5 article figure {
+.section-5 div figure {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.section-5 article figure img {
+.section-5 div figure img {
     width: 100%;
     height: 185px;
     object-fit: cover;
     border-radius: 24px;
 }
 
-.section-5 article figure figcaption {
+.section-5 div figure figcaption {
     position: absolute;
     font-size: 24px;
     font-weight: 700;
@@ -493,24 +496,24 @@ header nav ul li button:hover::after {
     text-align: center;
 }
 
-.section-6 article {
+.section-6 div {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.section-6 article img {
+.section-6 div img {
     height: 708px;
 }
 
-.section-6 article ol {
+.section-6 div ol {
     width: 431px;
     display: flex;
     flex-direction: column;
     gap: 40px;
 }
 
-.section-6 article ol li {
+.section-6 div ol li {
     height: 72px;
     font-weight: 700;
     font-size: 24px;
@@ -519,7 +522,7 @@ header nav ul li button:hover::after {
     gap: 32px;
 }
 
-.section-6 article ol li::before {
+.section-6 div ol li::before {
     content: '1';
     min-width: 72px;
     height: 72px;
@@ -533,19 +536,19 @@ header nav ul li button:hover::after {
     align-items: center;
 }
 
-.section-6 article ol li:nth-child(2)::before {
+.section-6 div ol li:nth-child(2)::before {
     content: '2';
 }
 
-.section-6 article ol li:nth-child(3)::before {
+.section-6 div ol li:nth-child(3)::before {
     content: '3';
 }
 
-.section-6 article ol li:nth-child(4)::before {
+.section-6 div ol li:nth-child(4)::before {
     content: '4';
 }
 
-.section-6 article ol li:nth-child(5)::before {
+.section-6 div ol li:nth-child(5)::before {
     content: '5';
 }
 
@@ -594,19 +597,19 @@ header nav ul li button:hover::after {
     margin-bottom: 24px;
 }
 
-.section-7 span {
+.section-7 .star-review {
     display: flex;
     align-items: center;
     gap: 24px;
     margin-bottom: 56px;
 }
 
-.section-7 span ul {
+.section-7 .star-review ul {
     display: flex;
     height: 32px;
 }
 
-.section-7 span p {
+.section-7 .star-review p {
     font-size: 24px;
     font-weight: 700;
     background: var(--btn-linear-gradient);
@@ -616,7 +619,7 @@ header nav ul li button:hover::after {
     text-fill-color: transparent;
 }
 
-.section-7 article {
+.section-7 .reviews {
     height: 248px;
     display: flex;
     align-items: baseline;
@@ -653,30 +656,32 @@ header nav ul li button:hover::after {
     background-color: var(--color-white);
     border-radius: 64px 64px 0 0;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: baseline;
     padding: 128px 112px 200px 56px;
+    position: relative;
 }
 
-.section-8 img {
+.section-8::before {
+    content: '';
+    display: block;
     width: 692px;
     height: 519px;
+    background: url('../images/phones/iphone-12-pro.png');
+    position: absolute;
+    left: 0;
 }
 
-.section-8 article {
-    display: flex;
-    flex-direction: column;
-    align-items: baseline;
-    gap: 27px;
-}
-
-.section-8 article h2 {
+.section-8 h2 {
     font-size: 64px;
     font-weight: 700;
     color: #303437;
+    margin-left: 50%;
+    margin-bottom: 27px;
 }
 
-.section-8 article h2 strong {
+.section-8 h2 strong {
     background: var(--btn-linear-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -688,6 +693,7 @@ header nav ul li button:hover::after {
     display: flex;
     flex-direction: column;
     gap: 40px;
+    margin-left: 50%;
 }
 
 .btn-download-2 a {
