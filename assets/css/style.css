@@ -34,16 +34,16 @@
 
 body {
     background-color: var(--color-background);
+    font-family: 'Urbanist', sans-serif;
     margin: auto;
     max-width: 1440px;
-    font-family: 'Urbanist', sans-serif;
 }
 
 /* Header */
 
 header {
     line-height: 111px;
-    margin-bottom: 48px;
+    margin: 0 112px 48px;
 }
 
 header nav ul {
@@ -101,7 +101,7 @@ header nav ul li button:hover::after {
 .section-1 {
     height: 790px;
     position: relative;
-    margin-bottom: 128px;
+    margin: 0 112px 128px;
 }
 
 .bg-linear-gradient {
@@ -211,7 +211,7 @@ header nav ul li button:hover::after {
     display: flex;
     flex-direction: column;
     gap: 48px;
-    margin-bottom: 128px;
+    margin: 0 112px 128px;
 }
 
 .section-2 h2 {
@@ -272,7 +272,7 @@ header nav ul li button:hover::after {
     display: flex;
     flex-direction: column;
     gap: 48px;
-    margin-bottom: 128px;
+    margin: 0 112px 128px;
 }
 
 .section-3 h2 {
@@ -313,7 +313,7 @@ header nav ul li button:hover::after {
 .section-4 {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 177px;
+    margin: 0 167px 177px 102px;
 }
 
 .section-4 article {
@@ -389,6 +389,7 @@ header nav ul li button:hover::after {
     background-color: var(--color-white);
     border-radius: 64px;
     padding: 56px 156px;
+    margin: 0 112px 104px;
 }
 
 .section-5 h2 {
@@ -474,4 +475,243 @@ header nav ul li button:hover::after {
 .section-5 button:hover::after {
     opacity: 1;
     transform: translateX(75px);
+}
+
+/* Section 6 */
+
+.section-6 {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    margin: 0 169px 128px 116px;
+}
+
+.section-6 h2 {
+    font-size: 64px;
+    font-weight: 700;
+    color: #303437;
+    text-align: center;
+}
+
+.section-6 article {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section-6 article img {
+    height: 708px;
+}
+
+.section-6 article ol {
+    width: 431px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.section-6 article ol li {
+    height: 72px;
+    font-weight: 700;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.section-6 article ol li::before {
+    content: '1';
+    min-width: 72px;
+    height: 72px;
+    background-color: #303437;
+    border-radius: 16px;
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--color-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-6 article ol li:nth-child(2)::before {
+    content: '2';
+}
+
+.section-6 article ol li:nth-child(3)::before {
+    content: '3';
+}
+
+.section-6 article ol li:nth-child(4)::before {
+    content: '4';
+}
+
+.section-6 article ol li:nth-child(5)::before {
+    content: '5';
+}
+
+/* Section 7 */
+
+.section-7 {
+    height: 709px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    margin-left: 112px;
+    margin-bottom: 128px;
+    position: relative;
+}
+
+.section-7::before {
+    content: '';
+    display: block;
+    width: 704px;
+    height: 554px;
+    background-color: #E7E7FF;
+    border-radius: 200px 0px 0px 200px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -2;
+}
+
+.section-7::after {
+    content: '';
+    display: block;
+    width: 518px;
+    height: 706px;
+    background: url('/assets/images/women-with-phone.png');
+    position: absolute;
+    right: 114px;
+    bottom: 0;
+    z-index: -1;
+}
+
+.section-7 h2 {
+    width: 45%;
+    font-size: 64px;
+    font-weight: 700;
+    color: #303437;
+    margin-bottom: 24px;
+}
+
+.section-7 span {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 56px;
+}
+
+.section-7 span ul {
+    display: flex;
+    height: 32px;
+}
+
+.section-7 span p {
+    font-size: 24px;
+    font-weight: 700;
+    background: var(--btn-linear-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+.section-7 article {
+    height: 248px;
+    display: flex;
+    align-items: baseline;
+    gap: 40px;
+}
+
+.card-review {
+    width: 287px;
+    padding: 32px;
+    background-color: var(--color-white);
+    border: 1px solid #F2F4F5;
+    box-shadow: 0px 0px 8px rgba(20, 20, 20, 0.08);
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.card-review-text {
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    color: #303437;
+}
+
+.card-review-user {
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    color: #979C9E;
+}
+
+/* Section 8 */
+
+.section-8 {
+    background-color: var(--color-white);
+    border-radius: 64px 64px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 128px 112px 200px 56px;
+}
+
+.section-8 img {
+    width: 692px;
+    height: 519px;
+}
+
+.section-8 article {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    gap: 27px;
+}
+
+.section-8 article h2 {
+    font-size: 64px;
+    font-weight: 700;
+    color: #303437;
+}
+
+.section-8 article h2 strong {
+    background: var(--btn-linear-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+.btn-download-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.btn-download-2 a {
+    background-color: #F1F5F9;
+    color: #303437;
+    padding: 17px 87px;
+    box-shadow: 0px -4px 15px -6px rgba(255, 255, 255, 0.5), -1px 2px 6px 1px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    display: flex;
+    gap: 8px;
+}
+
+.btn-download-2 a img {
+    width: 56px;
+    height: 56px;
+}
+
+.btn-download-2 a p {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-download-2 a strong {
+    font-size: 32px;
+    font-weight: 600;
+    color: #303437;
 }
