@@ -579,7 +579,7 @@ header nav ul li button:hover::after {
     display: block;
     width: 518px;
     height: 706px;
-    background: url('/assets/images/women-with-phone.png');
+    background: url('../images/women-with-phone.png');
     position: absolute;
     right: 114px;
     bottom: 0;
