@@ -16,16 +16,31 @@
 
 :root {
     --color-white: #FFFFFF;
-    --color-background: #F4F5FB;
-    --btn-linear-gradient: linear-gradient(92deg, rgba(57, 147, 237), rgba(55, 82, 183) 97%);
+    --color-dark-grey: #303437;
+    --color-blue-gradient: linear-gradient(92deg, rgba(57, 147, 237), rgba(55, 82, 183) 97%);
+    
+    --font-size-h2: 64px;
+
+    --main-font: 'Urbanist', sans-serif;
+    --secondary-font: 'Raleway', sans-serif;
 }
 
 /******************************
 ************ D.R.Y ************
 ******************************/
 
+.direction-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.title-h2 {
+    font-size: var(--font-size-h2);
+    color: var(--color-dark-grey);
+}
+
 .background-gradient {
-    background: var(--btn-linear-gradient);
+    background: var(--color-blue-gradient);
 }
 
 /*****************************
@@ -33,8 +48,8 @@
 *****************************/
 
 body {
-    background-color: var(--color-background);
-    font-family: 'Urbanist', sans-serif;
+    background-color: #F4F5FB;
+    font-family: var(--main-font);
     margin: auto;
     max-width: 1440px;
 }
@@ -55,7 +70,7 @@ header nav ul {
 header nav ul li a {
     font-size: 48px;
     font-weight: bold;
-    color: #303437;
+    color: var(--color-dark-grey);
 }
 
 header nav ul li button {
@@ -64,7 +79,7 @@ header nav ul li button {
     height: 50px;
     border-radius: 24px;
     color: var(--color-white);
-    font-family: 'Urbanist', sans-serif;
+    font-family: var(--main-font);
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -78,7 +93,7 @@ header nav ul li button:hover {
 }
 
 header nav ul li button::after {
-    content: "";
+    content: '';
     display: block;
     background: url("../images/icons/arrow-right-icon.svg");
     background-repeat: no-repeat;
@@ -100,8 +115,6 @@ header nav ul li button:hover::after {
 
 .section-1 {
     height: calc(792px - 70px);
-    display: flex;
-    flex-direction: column;
     gap: 62px;
     position: relative;
     margin: 0 112px 128px;
@@ -110,7 +123,6 @@ header nav ul li button:hover::after {
 
 .section-1 h1 {
     font-size: 96px;
-    font-weight: 700;
     color: var(--color-white);
     width: 6em;
 }
@@ -121,7 +133,7 @@ header nav ul li button:hover::after {
 }
 
 .btn-download a {
-    background: var(--btn-linear-gradient);
+    background: var(--color-blue-gradient);
     color: var(--color-white);
     border-radius: 24px;
     padding: 16px 24px;
@@ -169,7 +181,7 @@ header nav ul li button:hover::after {
 }
 
 .bg-linear-gradient::before {
-    content: "";
+    content: '';
     display: block;
     background: rgb(0 0 0 / 20%);
     position: absolute;
@@ -189,7 +201,7 @@ header nav ul li button:hover::after {
 }
 
 .bg-linear-gradient::after {
-    content: "";
+    content: '';
     display: block;
     background: linear-gradient(165.18deg, rgba(22, 191, 253, 0.25) 6.08%, rgba(203, 48, 102, 0.25) 94.78%);
     opacity: 0.5;
@@ -204,16 +216,11 @@ header nav ul li button:hover::after {
 /* How to works */
 
 .section-2 {
-    display: flex;
-    flex-direction: column;
     gap: 48px;
     margin: 0 112px 128px;
 }
 
 .section-2 h2 {
-    font-size: 64px;
-    font-weight: 700;
-    color: #303437;
     text-align: center;
 }
 
@@ -236,13 +243,13 @@ header nav ul li button:hover::after {
 }
 
 .section-2 ul li:nth-child(1) {
-    background: var(--btn-linear-gradient);
+    background: var(--color-blue-gradient);
 }
 
 .section-2 ul li img {
     width: 24px;
     height: 24px;
-    background-color: #303437;
+    background-color: var(--color-dark-grey);
     border-radius: 8px;
     padding: 16px;
 }
@@ -253,8 +260,7 @@ header nav ul li button:hover::after {
 
 .section-2 ul li p {
     font-size: 24px;
-    font-weight: 700;
-    color: #303437;
+    color: var(--color-dark-grey);
     text-align: center;
 }
 
@@ -265,16 +271,11 @@ header nav ul li button:hover::after {
 /* Get Profit. Get results */
 
 .section-3 {
-    display: flex;
-    flex-direction: column;
     gap: 48px;
     margin: 0 112px 128px;
 }
 
 .section-3 h2 {
-    font-size: 64px;
-    font-weight: 700;
-    color: #303437;
     text-align: center;
 }
 
@@ -305,7 +306,7 @@ header nav ul li button:hover::after {
 }
 
 .section-3 article figure figcaption p {
-    font-family: 'Raleway', sans-serif;
+    font-family: var(--secondary-font);
 }
 
 /* Section 4 */
@@ -314,8 +315,6 @@ header nav ul li button:hover::after {
     height: 778px;
     margin: 0 167px 177px 102px;
     position: relative;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
 }
 
@@ -334,24 +333,22 @@ header nav ul li button:hover::after {
 .section-4 h2 {
     width: 591px;
     font-size: 48px;
-    color: #303437;
     margin-bottom: 24px;
 }
 
 .section-4 p {
     width: 591px;
-    font-family: 'Raleway', sans-serif;
-    color: #303437;
+    font-family: var(--secondary-font);
+    color: var(--color-dark-grey);
     font-size: 20px;
     margin-bottom: 56px;
 }
 
 .section-4 button {
-    font-family: 'Urbanist', sans-serif;
-    background: var(--btn-linear-gradient);
+    font-family: var(--main-font);
+    background: var(--color-blue-gradient);
     color: var(--color-white);
     border-radius: 24px;
-    font-weight: 700;
     width: 176px;
     height: 56px;
     display: flex;
@@ -367,7 +364,7 @@ header nav ul li button:hover::after {
 }
 
 .section-4 button::after {
-    content: "";
+    content: '';
     display: block;
     background: url("../images/icons/arrow-right-icon.svg");
     background-repeat: no-repeat;
@@ -395,18 +392,15 @@ header nav ul li button:hover::after {
 }
 
 .section-5 h2 {
-    font-size: 64px;
-    font-weight: 700;
-    color: #303437;
     text-align: center;
     margin-bottom: 6px;
 }
 
 .section-5 p {
-    font-family: 'Raleway', sans-serif;
+    font-family: var(--secondary-font);
     font-size: 20px;
     font-weight: 600;
-    color: #303437;
+    color: var(--color-dark-grey);
     text-align: center;
     margin-bottom: 56px;
 }
@@ -441,8 +435,8 @@ header nav ul li button:hover::after {
 }
 
 .section-5 button {
-    font-family: 'Urbanist', sans-serif;
-    background: var(--btn-linear-gradient);
+    font-family: var(--main-font);
+    background: var(--color-blue-gradient);
     color: var(--color-white);
     border-radius: 24px;
     font-weight: 700;
@@ -462,7 +456,7 @@ header nav ul li button:hover::after {
 }
 
 .section-5 button::after {
-    content: "";
+    content: '';
     display: block;
     background: url("../images/icons/arrow-right-icon.svg");
     background-repeat: no-repeat;
@@ -483,16 +477,11 @@ header nav ul li button:hover::after {
 /* Section 6 */
 
 .section-6 {
-    display: flex;
-    flex-direction: column;
     gap: 48px;
     margin: 0 169px 128px 116px;
 }
 
 .section-6 h2 {
-    font-size: 64px;
-    font-weight: 700;
-    color: #303437;
     text-align: center;
 }
 
@@ -508,8 +497,6 @@ header nav ul li button:hover::after {
 
 .section-6 div ol {
     width: 431px;
-    display: flex;
-    flex-direction: column;
     gap: 40px;
 }
 
@@ -526,7 +513,7 @@ header nav ul li button:hover::after {
     content: '1';
     min-width: 72px;
     height: 72px;
-    background-color: #303437;
+    background-color: var(--color-dark-grey);
     border-radius: 16px;
     font-size: 40px;
     font-weight: 700;
@@ -556,8 +543,6 @@ header nav ul li button:hover::after {
 
 .section-7 {
     height: 709px;
-    display: flex;
-    flex-direction: column;
     justify-content: end;
     margin-left: 112px;
     margin-bottom: 128px;
@@ -591,9 +576,6 @@ header nav ul li button:hover::after {
 
 .section-7 h2 {
     width: 45%;
-    font-size: 64px;
-    font-weight: 700;
-    color: #303437;
     margin-bottom: 24px;
 }
 
@@ -612,7 +594,7 @@ header nav ul li button:hover::after {
 .section-7 .star-review p {
     font-size: 24px;
     font-weight: 700;
-    background: var(--btn-linear-gradient);
+    background: var(--color-blue-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -639,13 +621,13 @@ header nav ul li button:hover::after {
 }
 
 .card-review-text {
-    font-family: 'Raleway', sans-serif;
+    font-family: var(--secondary-font);
     font-size: 20px;
-    color: #303437;
+    color: var(--color-dark-grey);
 }
 
 .card-review-user {
-    font-family: 'Raleway', sans-serif;
+    font-family: var(--secondary-font);
     font-size: 20px;
     color: #979C9E;
 }
@@ -655,8 +637,6 @@ header nav ul li button:hover::after {
 .section-8 {
     background-color: var(--color-white);
     border-radius: 64px 64px 0 0;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: baseline;
     padding: 128px 112px 200px 56px;
@@ -674,15 +654,12 @@ header nav ul li button:hover::after {
 }
 
 .section-8 h2 {
-    font-size: 64px;
-    font-weight: 700;
-    color: #303437;
     margin-left: 50%;
     margin-bottom: 27px;
 }
 
 .section-8 h2 strong {
-    background: var(--btn-linear-gradient);
+    background: var(--color-blue-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -690,15 +667,13 @@ header nav ul li button:hover::after {
 }
 
 .btn-download-2 {
-    display: flex;
-    flex-direction: column;
     gap: 40px;
     margin-left: 50%;
 }
 
 .btn-download-2 a {
     background-color: #F1F5F9;
-    color: #303437;
+    color: var(--color-dark-grey);
     padding: 17px 87px;
     box-shadow: 0px -4px 15px -6px rgba(255, 255, 255, 0.5), -1px 2px 6px 1px rgba(0, 0, 0, 0.1);
     border-radius: 16px;
@@ -719,5 +694,5 @@ header nav ul li button:hover::after {
 .btn-download-2 a strong {
     font-size: 32px;
     font-weight: 600;
-    color: #303437;
+    color: var(--color-dark-grey);
 }
